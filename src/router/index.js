@@ -1,14 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import NewMovie from '@/components/NewMovie'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: Home
+    name: 'NewMovie',
+    component: NewMovie
   },
   {
     path: '/about',
@@ -18,6 +19,7 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   }
+  
 ]
 
 const router = new VueRouter({
